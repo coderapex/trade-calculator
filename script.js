@@ -72,6 +72,27 @@ let calculate = () => {
 
   // calculating advanced leverage rates
   // 3x 5x 8x 10x 15x
+  document.getElementById("l0-val").innerHTML = Math.floor(
+    (capital * 2) / price
+  );
+  document.getElementById("l1-val").innerHTML = Math.floor(
+    (capital * 3) / price
+  );
+  document.getElementById("l2-val").innerHTML = Math.floor(
+    (capital * 5) / price
+  );
+  document.getElementById("l3-val").innerHTML = Math.floor(
+    (capital * 8) / price
+  );
+  document.getElementById("l4-val").innerHTML = Math.floor(
+    (capital * 10) / price
+  );
+  document.getElementById("l5-val").innerHTML = Math.floor(
+    (capital * 12) / price
+  );
+  document.getElementById("l6-val").innerHTML = Math.floor(
+    (capital * 15) / price
+  );
 
   renderAdvancedView();
 };

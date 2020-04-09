@@ -53,70 +53,109 @@
         </div>
       </div>
 
-      <div id="input">
+      <div id="input-section">
         <h3>Enter Price Here</h3>
-        <input
-          id="price-value"
-          type="number"
-          value="100"
-          min="1"
-          step="0.05"
-          placeholder="Default value is 100"
-        />
-        <button id="submit-button">Calculate</button>
-        <button id="advanced-button">Show Advanced</button>
-        <button id="advanced-price-button">Toggle Prices</button>
-        <button id="advanced-leverage-button">Toggle Leverage</button>
+        <div id="price-button-row">
+          <input
+            class="input-big"
+            id="price-value"
+            type="number"
+            value="100"
+            min="1"
+            step="0.05"
+            placeholder="Default value is 100"
+          />
+          <button class="button-big" id="submit-button">Calculate</button>
+        </div>
+
+        <div id="advanced-button-row">
+          <button class="button-red" id="advanced-button">Show Advanced</button>
+          <button class="button-blue" id="advanced-price-button">
+            Toggle Prices
+          </button>
+          <button class="button-violet" id="advanced-leverage-button">
+            Toggle Leverage
+          </button>
+        </div>
       </div>
 
-      <div id="buy">
+      <div class="card" id="buy">
         <h2>Buy at</h2>
         <h1 id="buy-at"></h1>
       </div>
 
-      <div id="cmp">
+      <div class="card" id="cmp">
         <h2>CMP</h2>
         <h1 id="cmp-at"></h1>
       </div>
 
-      <div id="sell">
+      <div class="card" id="sell">
         <h2>Sell at</h2>
         <h1 id="sell-at"></h1>
       </div>
 
       <div id="advanced-price">
-        <div id="buy1"><h3>100</h3></div>
-        <div id="buy2"><h3>100</h3></div>
-        <div id="buy3"><h3>100</h3></div>
-        <div id="buy4"><h3>100</h3></div>
-        <div id="buy5"><h3>100</h3></div>
+        <div class="card" id="buy1"><h3>100</h3></div>
+        <div class="card" id="buy2"><h3>100</h3></div>
+        <div class="card" id="buy3"><h3>100</h3></div>
+        <div class="card" id="buy4"><h3>100</h3></div>
+        <div class="card" id="buy5"><h3>100</h3></div>
         <div id="rate1"><h3>0.1%</h3></div>
         <div id="rate2"><h3>0.2%</h3></div>
         <div id="rate3"><h3>0.3%</h3></div>
         <div id="rate4"><h3>0.4%</h3></div>
         <div id="rate5"><h3>0.5%</h3></div>
-        <div id="sell1"><h3>100</h3></div>
-        <div id="sell2"><h3>100</h3></div>
-        <div id="sell3"><h3>100</h3></div>
-        <div id="sell4"><h3>100</h3></div>
-        <div id="sell5"><h3>100</h3></div>
+        <div class="card" id="sell1"><h3>100</h3></div>
+        <div class="card" id="sell2"><h3>100</h3></div>
+        <div class="card" id="sell3"><h3>100</h3></div>
+        <div class="card" id="sell4"><h3>100</h3></div>
+        <div class="card" id="sell5"><h3>100</h3></div>
       </div>
 
       <div id="leverage-row">
-        <div id="without-leverage">
+        <div class="card" id="without-leverage">
           <h5>Without leverage buy</h5>
           <h1 id="without-leverage-value">X</h1>
           <h5>stocks</h5>
         </div>
 
-        <div id="with-leverage">
+        <div class="card" id="with-leverage">
           <h5>With leverage buy</h5>
           <h1 id="with-leverage-value">X</h1>
           <h5>stocks</h5>
         </div>
       </div>
 
-      <div id="advanced-leverage">Advanced Leverage</div>
+      <div id="advanced-leverage">
+        <div class="card" id="l0">
+          <h4>2x</h4>
+          <h3 id="l0-val">50</h3>
+        </div>
+        <div class="card" id="l1">
+          <h4>3x</h4>
+          <h3 id="l1-val">50</h3>
+        </div>
+        <div class="card" id="l2">
+          <h4>5x</h4>
+          <h3 id="l2-val">50</h3>
+        </div>
+        <div class="card" id="l3">
+          <h4>8x</h4>
+          <h3 id="l3-val">50</h3>
+        </div>
+        <div class="card" id="l4">
+          <h4>10x</h4>
+          <h3 id="l4-val">50</h3>
+        </div>
+        <div class="card" id="l5">
+          <h4>12x</h4>
+          <h3 id="l5-val">50</h3>
+        </div>
+        <div class="card" id="l6">
+          <h4>15x</h4>
+          <h3 id="l6-val">50</h3>
+        </div>
+      </div>
     </h3>
 
     <script src="script.js"></script>
