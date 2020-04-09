@@ -1,0 +1,150 @@
+body {
+  font-family: sans-serif;
+}
+
+input {
+  padding: 3px;
+  border: none;
+  border-bottom: 2px solid red;
+}
+input:hover {
+  border-bottom: 2px solid rgb(1, 133, 1);
+}
+input:focus {
+  border-bottom: 2px solid rgb(41, 180, 235);
+
+  animation-name: colors;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colors {
+  0% {
+    border-bottom: 2px solid rgb(41, 180, 235);
+  }
+  33% {
+    border-bottom: 2px solid rgb(89, 211, 84);
+  }
+  66% {
+    border-bottom: 2px solid rgb(207, 89, 89);
+  }
+  100% {
+    border-bottom: 2px solid rgb(41, 180, 235);
+  }
+}
+
+#parent {
+  text-align: center;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(auto, auto);
+  gap: 0px 0px;
+  grid-template-areas: "heading heading heading" "param param param" "input input input" "buy cmp sell" "leverage-row leverage-row leverage-row";
+}
+
+#heading {
+  grid-area: heading;
+}
+
+#input {
+  grid-area: input;
+  padding: 10px;
+
+  background-color: rgb(205, 248, 197);
+}
+
+#param {
+  grid-area: param;
+  padding: 10px;
+
+  background-color: rgb(240, 255, 244);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(auto, auto);
+  gap: 0px 0px;
+  grid-template-areas: "parameters-heading parameters-heading parameters-heading parameters-heading parameters-heading parameters-heading parameters-heading parameters-heading parameters-heading parameters-heading parameters-heading parameters-heading" "range range range range capital capital capital capital leverage leverage leverage leverage" "without-leverage without-leverage without-leverage without-leverage without-leverage without-leverage with-leverage with-leverage with-leverage with-leverage with-leverage with-leverage";
+}
+
+#leverage {
+  grid-area: leverage;
+}
+
+#capital {
+  grid-area: capital;
+}
+
+#range {
+  grid-area: range;
+}
+
+#parameters-heading {
+  grid-area: parameters-heading;
+}
+
+#percentage-value {
+  width: 60px;
+}
+
+#capital-value {
+  width: 60px;
+}
+
+#leverage-value {
+  width: 60px;
+}
+
+#buy {
+  grid-area: buy;
+  padding: 10px;
+
+  background-color: #3a64ee;
+  color: aliceblue;
+}
+
+#cmp {
+  grid-area: cmp;
+  padding: 10px;
+
+  background-color: #1f9332;
+  color: aliceblue;
+}
+
+#sell {
+  grid-area: sell;
+  padding: 10px;
+
+  background-color: #f06034;
+  color: aliceblue;
+}
+
+#leverage-row {
+  grid-area: leverage-row;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "without-leverage with-leverage";
+
+  text-align: center;
+  color: aliceblue;
+}
+
+#without-leverage {
+  grid-area: without-leverage;
+  /* margin: 10px; */
+
+  background-color: #9b59b6;
+}
+
+#with-leverage {
+  grid-area: with-leverage;
+  /* margin: 10px; */
+
+  background-color: #8e44ad;
+}
