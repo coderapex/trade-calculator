@@ -1,6 +1,13 @@
 let submit = document.getElementById("submit-button");
+let advancedButton = document.getElementById("advanced-button");
+let advancedPriceButton = document.getElementById("advanced-price-button");
+let advancedLeverageButton = document.getElementById(
+  "advanced-leverage-button"
+);
 
 let showAdvanced = false;
+let advancedPrice = false;
+let advancedLeverage = false;
 
 let calculate = () => {
   // render CMP
@@ -65,6 +72,57 @@ let calculate = () => {
 
   // calculating advanced leverage rates
   // 3x 5x 8x 10x 15x
+
+  renderAdvancedView();
+};
+
+let renderAdvancedView = () => {
+  if (showAdvanced == false) {
+    advancedPrice = false;
+    advancedLeverage = false;
+  } else {
+    advancedPrice = true;
+    advancedLeverage = true;
+  }
+
+  renderAdvancedPrice();
+  renderAdvancedLeverage();
+};
+
+let renderAdvancedPrice = () => {
+  if (advancedPrice == false) {
+    document.getElementById("advanced-price").style.display = "none";
+  } else {
+    document.getElementById("advanced-price").style.display = "grid";
+  }
+};
+
+let renderAdvancedLeverage = () => {
+  if (advancedLeverage == false) {
+    document.getElementById("advanced-leverage").style.display = "none";
+  } else {
+    document.getElementById("advanced-leverage").style.display = "grid";
+  }
+};
+
+let toggleAdvancedView = () => {
+  showAdvanced = !showAdvanced;
+  renderAdvancedView();
+};
+
+let toggleAdvancedPrice = () => {
+  advancedPrice = !advancedPrice;
+  renderAdvancedPrice();
+};
+
+let toggleAdvancedLeverage = () => {
+  advancedLeverage = !advancedLeverage;
+  renderAdvancedLeverage();
 };
 
 submit.addEventListener("click", calculate);
+advancedButton.addEventListener("click", toggleAdvancedView);
+advancedPriceButton.addEventListener("click", toggleAdvancedPrice);
+advancedLeverageButton.addEventListener("click", toggleAdvancedLeverage);
+
+calculate();
