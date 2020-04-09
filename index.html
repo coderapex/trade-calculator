@@ -7,22 +7,9 @@
   </head>
 
   <body>
-    <div id="parent">
+    <h3 id="parent">
       <div id="heading">
         <h1>Price Range Calculator</h1>
-      </div>
-
-      <div id="input">
-        <h3>Enter Price Here</h3>
-        <input
-          id="price-value"
-          type="number"
-          value="100"
-          min="1"
-          step="0.05"
-          placeholder="Default value is 100"
-        />
-        <button id="submit-button">Calculate</button>
       </div>
 
       <div id="param">
@@ -66,6 +53,19 @@
         </div>
       </div>
 
+      <div id="input">
+        <h3>Enter Price Here</h3>
+        <input
+          id="price-value"
+          type="number"
+          value="100"
+          min="1"
+          step="0.05"
+          placeholder="Default value is 100"
+        />
+        <button id="submit-button">Calculate</button>
+      </div>
+
       <div id="buy">
         <h2>Buy at</h2>
         <h1 id="buy-at"></h1>
@@ -81,6 +81,24 @@
         <h1 id="sell-at"></h1>
       </div>
 
+      <div id="advanced-price">
+        <div id="buy1"><h3>100</h3></div>
+        <div id="buy2"><h3>100</h3></div>
+        <div id="buy3"><h3>100</h3></div>
+        <div id="buy4"><h3>100</h3></div>
+        <div id="buy5"><h3>100</h3></div>
+        <div id="rate1"><h3>0.1%</h3></div>
+        <div id="rate2"><h3>0.2%</h3></div>
+        <div id="rate3"><h3>0.3%</h3></div>
+        <div id="rate4"><h3>0.4%</h3></div>
+        <div id="rate5"><h3>0.5%</h3></div>
+        <div id="sell1"><h3>100</h3></div>
+        <div id="sell2"><h3>100</h3></div>
+        <div id="sell3"><h3>100</h3></div>
+        <div id="sell4"><h3>100</h3></div>
+        <div id="sell5"><h3>100</h3></div>
+      </div>
+
       <div id="leverage-row">
         <div id="without-leverage">
           <h5>Without leverage buy</h5>
@@ -94,7 +112,9 @@
           <h5>stocks</h5>
         </div>
       </div>
-    </div>
+
+      <div id="advanced-leverage">Advanced Leverage</div>
+    </h3>
 
     <script src="script.js"></script>
   </body>

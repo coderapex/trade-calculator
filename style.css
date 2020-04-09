@@ -36,14 +36,13 @@ input:focus {
 #parent {
   text-align: center;
 
-  min-width: 100vw;
   min-height: 100vh;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-auto-rows: minmax(auto, auto);
   gap: 0px 0px;
-  grid-template-areas: "heading heading heading" "param param param" "input input input" "buy cmp sell" "leverage-row leverage-row leverage-row";
+  grid-template-areas: "heading heading heading" "param param param" "input input input" "buy cmp sell" "advanced-price advanced-price advanced-price" "leverage-row leverage-row leverage-row" "advanced-leverage advanced-leverage advanced-leverage";
 }
 
 #heading {
@@ -104,6 +103,122 @@ input:focus {
 
   background-color: #3a64ee;
   color: aliceblue;
+}
+
+#advanced-price {
+  grid-area: advanced-price;
+
+  text-align: center;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(auto, auto);
+  /* grid-template-rows: 1fr auto 1fr; */
+  grid-template-areas: "buy1 buy2 buy3 buy4 buy5" "rate1 rate2 rate3 rate4 rate5" "sell1 sell2 sell3 sell4 sell5";
+}
+
+#buy1 {
+  padding: 10px;
+  grid-area: buy1;
+
+  background-color: #bbdefb;
+}
+
+#buy2 {
+  padding: 10px;
+  grid-area: buy2;
+
+  background-color: #90caf9;
+}
+
+#buy3 {
+  padding: 10px;
+  grid-area: buy3;
+
+  background-color: #64b5f6;
+}
+
+#buy4 {
+  padding: 10px;
+  grid-area: buy4;
+
+  background-color: #42a5f5;
+}
+
+#buy5 {
+  padding: 10px;
+  grid-area: buy5;
+
+  background-color: #2196f3;
+}
+
+#rate1 {
+  padding: 1px;
+  grid-area: rate1;
+  background-color: rgb(233, 233, 233);
+}
+
+#rate2 {
+  padding: 1px;
+  grid-area: rate2;
+  background-color: rgb(220, 220, 220);
+}
+
+#rate3 {
+  padding: 1px;
+  grid-area: rate3;
+  background-color: rgb(200, 200, 200);
+}
+
+#rate4 {
+  padding: 1px;
+  grid-area: rate4;
+  background-color: rgb(180, 180, 180);
+}
+
+#rate5 {
+  padding: 1px;
+  grid-area: rate5;
+  background-color: rgb(160, 160, 160);
+}
+
+#sell1 {
+  padding: 10px;
+  grid-area: sell1;
+
+  background-color: #ffccbc;
+}
+
+#sell2 {
+  padding: 10px;
+  grid-area: sell2;
+
+  background-color: #ffab91;
+}
+
+#sell3 {
+  padding: 10px;
+  grid-area: sell3;
+
+  background-color: #ff8a65;
+}
+
+#sell4 {
+  padding: 10px;
+  grid-area: sell4;
+
+  background-color: #ff7043;
+}
+
+#sell5 {
+  padding: 10px;
+  grid-area: sell5;
+
+  background-color: #ff5722;
+}
+
+#advanced-leverage {
+  grid-area: advanced-leverage;
 }
 
 #cmp {
